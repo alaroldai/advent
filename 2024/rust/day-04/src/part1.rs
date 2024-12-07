@@ -14,8 +14,6 @@ fn adj_search(input: &Vec<Vec<char>>, i: isize, j: isize) -> u32 {
   let mut count = 0;
   let dims = (input.len() as isize, input[0].len() as isize);
   for indices in kernel {
-    dbg!(indices);
-    dbg!(dims);
     if indices
       .iter()
       .any(|(i, j)| *i < 0 || *j < 0 || *i >= input.len() as isize || *j >= input[0].len() as isize)

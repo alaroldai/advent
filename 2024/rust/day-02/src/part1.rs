@@ -24,7 +24,6 @@ pub fn process(input: &str) -> anyhow::Result<String> {
           }
           last_diff = diff;
         }
-        dbg!(format!("{:?} is safe", levels));
         return 1u32;
       })
       .sum::<u32>()

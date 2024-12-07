@@ -34,7 +34,6 @@ pub fn process(input: &str) -> anyhow::Result<String> {
       if j == 0 || j == line.len() - 1 {
         continue;
       }
-      dbg!((i, j));
       if c == 'A' {
         count += adj_search(&input, i as isize, j as isize) as u32;
       }

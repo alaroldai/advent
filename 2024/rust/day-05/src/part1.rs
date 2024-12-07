@@ -27,7 +27,7 @@ pub fn process(input: &str) -> anyhow::Result<String> {
   let result: u32 = page_lists
     .iter()
     .filter(|list| correctly_ordered(&rules, &list.0))
-    .map(|list| dbg!(list.0[list.0.len() / 2]))
+    .map(|list| list.0[list.0.len() / 2])
     .sum();
 
   Ok(result.to_string())
