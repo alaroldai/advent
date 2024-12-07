@@ -1,0 +1,27 @@
+[package]
+name = "{{project-name}}"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+itertools.workspace = true
+nom.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+anyhow.workspace = true
+glam.workspace = true
+ndarray.workspace = true
+num-traits.workspace = true
+aoc-tools = { path = "../aoc-tools" }
+
+[dev-dependencies]
+divan.workspace = true
+rstest.workspace = true
+test-log.workspace = true
+
+[[bench]]
+name = "{{project-name}}-bench"
+path = "benches/benchmarks.rs"
+harness = false

@@ -1,0 +1,8 @@
+test day part:
+  cargo nextest run -p {{day}} {{part}} --nocapture --no-fail-fast
+
+generate day:
+  cargo generate --path ./daily-template --name {{day}}
+
+bench day part:
+    cargo bench --bench {{day}}-bench {{part}} >> {{day}}.bench.txt

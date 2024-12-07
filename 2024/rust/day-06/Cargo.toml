@@ -1,0 +1,33 @@
+[package]
+name = "day-06"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+itertools.workspace = true
+nom.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+anyhow.workspace = true
+glam.workspace = true
+ndarray.workspace = true
+num-traits.workspace = true
+aoc-tools = { path = "../aoc-tools" }
+rayon.workspace = true
+bytemuck.workspace = true
+fxhash.workspace = true
+bitvec.workspace = true
+rangemap.workspace = true
+bitmask.workspace = true
+
+[dev-dependencies]
+divan.workspace = true
+rstest.workspace = true
+test-log.workspace = true
+
+[[bench]]
+name = "day-06-bench"
+path = "benches/benchmarks.rs"
+harness = false
